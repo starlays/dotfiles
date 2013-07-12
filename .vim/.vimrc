@@ -41,8 +41,14 @@
 " original repos on github
 """"""""""""""""""""""""""
 
+" Fugitive
+Bundle 'tpope/vim-fugitive'
+
+" Commenter
+Bundle 'tpope/vim-commentary'
+
 " Color scheme and settings {
-Bundle 'd11wtq/tomorrow-theme-vim'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
     syntax enable
     colorscheme Tomorrow-Night
