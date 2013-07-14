@@ -1,6 +1,9 @@
 [user]
     name = <name here> 
-    email = <e-mail here>
+    email = <email here>
+
+[core]
+    editor = vim
 
 [alias]
     co = checkout
@@ -18,3 +21,6 @@
 
 [status]
     color = auto
+
+[merge]
+    tool = vimdiff
