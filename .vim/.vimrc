@@ -8,7 +8,7 @@
     endif
     filetype off                   " stop vim look for file types
 
-    scriptencoding utf-8           " set encoding to UTF-8
+    scriptencoding utf-8
     " store undo files, undo edits after deleting a buffer
     set undofile
     set encoding=utf-8
@@ -41,18 +41,28 @@
 " original repos on github
 """"""""""""""""""""""""""
 
-" Fugitive
-Bundle 'tpope/vim-fugitive'
-
-" Commenter
-Bundle 'tpope/vim-commentary'
-
 " Color scheme and settings {
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'd11wtq/tomorrow-theme-vim'
 
     syntax enable
     colorscheme Tomorrow-Night
 " }
+
+" Syntactic checking {
+Bundle 'scrooloose/syntastic'
+" }
+
+" File tree explorer {
+Bundle 'scrooloose/nerdtree'
+"}
+
+" Paste with context indentation {
+Bundle 'sickill/vim-pasta'
+"}
+
+" Code compleation {
+Bundle 'Shougo/neocomplcache.vim'
+"}
 
 " Formatting {
 
@@ -64,8 +74,8 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
     set softtabstop=4  " Let backspace delete indent
     
    " Remove trailing whitespaces and ^M chars
-   " autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-   " autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+    autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+    autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 
 " }
 
@@ -85,4 +95,3 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
     highlight clear SignColumn   " SignColumn should match background for
                                  " things like vim-gitgutter
 " }
-
