@@ -38,7 +38,7 @@
 
 
 """""""""""""""""""""
-" Vundle settings {{{
+" Keyboard maping  {{{
 """""""""""""""""""""
     nmap <F2> :tabp<CR>
     nmap <F3> :tabn<CR>
