@@ -36,6 +36,15 @@
 
 " }}}
 
+
+"""""""""""""""""""""
+" Vundle settings {{{
+"""""""""""""""""""""
+    nmap <F2> :tabp<CR>
+    nmap <F3> :tabn<CR>
+    nmap <F4> :NERDTreeFocus<CR>
+" }}}
+
 """"""""""""""""""""""""""
 " My Bundles here:
 " original repos on github
@@ -73,9 +82,10 @@ Bundle 'Shougo/neocomplcache.vim'
     set tabstop=4      " An indentation every four columns
     set softtabstop=4  " Let backspace delete indent
     
-   " Remove trailing whitespaces and ^M chars
-    autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-    autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+    " Fix the difficult-to-read default setting for diff text highlighting.  The
+    " bang (!) is required since we are overwriting the DiffText setting. The highlighting
+    " for "Todo" also looks nice (yellow) if you don't like the "MatchParen" colors.
+    highlight! link DiffText MatchParen
 
 " }
 
